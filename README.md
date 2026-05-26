@@ -1,27 +1,30 @@
 # Tubes STD & Algo
 
 ## Deskripsi
-Proyek ini berisi notebook pembelajaran untuk materi Numpy dan Pandas, serta catatan instalasi library Python yang diperlukan.
+Proyek ini berisi notebook Python untuk mengunduh dataset churn dari Kaggle, memuat file CSV, dan menampilkan informasi dasar menggunakan `pandas`.
 
-## Struktur File
-- `Instal(P1).ipynb` - Notebook yang berisi panduan dan catatan instalasi library Python untuk proyek ini.
-- `Numpy&Pandas.ipynb` - Notebook yang berisi materi dan latihan penggunaan library Numpy dan Pandas.
-- `README.md` - File dokumentasi proyek ini.
+## File Projek
+- `cek data.ipynb` - Notebook utama yang mengunduh data dari dataset Kaggle `shrutimechlearn/churn-modelling`, lalu membaca dan menampilkan ringkasan `Churn_Modelling.csv`.
+- `README.md` - Dokumentasi proyek ini.
 
-## Cara Menggunakan
+## Cara Menjalankan
 1. Pastikan Python sudah terpasang di komputer.
-2. Buka folder proyek di editor seperti VS Code atau Jupyter Notebook.
-3. Jalankan `Instal(P1).ipynb` jika ingin memastikan library yang dibutuhkan sudah terpasang.
-4. Buka dan jalankan `Numpy&Pandas.ipynb` untuk mempelajari dan bereksperimen dengan Numpy dan Pandas.
+2. Install library yang diperlukan:
+   - `pip install kagglehub pandas numpy`
+3. Buka `cek data.ipynb` di Jupyter Notebook / Jupyter Lab / VS Code.
+4. Jalankan sel kode secara berurutan.
 
-## Library yang Direkomendasikan
-- `numpy`
+## Library yang Dibutuhkan
+- `kagglehub`
 - `pandas`
-- `jupyter` atau `notebook`
+- `numpy`
 
-## Tips
-- Gunakan environment virtual (`venv` atau `conda`) untuk menjaga dependensi tetap terpisah.
-- Jika belum terpasang, install library dengan `pip install numpy pandas jupyter`.
+## Catatan
+- Notebook ini menggunakan `kagglehub.dataset_download` untuk mengunduh dataset dari Kaggle.
+- Pastikan Anda memiliki akses atau kredensial Kaggle yang valid jika diperlukan oleh `kagglehub`.
 
-## Kontak
-Jika ada pertanyaan atau perlu bantuan, tambahkan catatan di notebook atau hubungi pembuat proyek.
+## Tujuan
+Notebook ini digunakan untuk:
+- Mengunduh dataset churn dari Kaggle
+- Memuat data ke dalam `pandas.DataFrame`
+- Menampilkan informasi struktur dataset menggunakan `df.info()`
