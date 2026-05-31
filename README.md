@@ -1,30 +1,63 @@
 # Tubes STD & Algo
 
 ## Deskripsi
-Proyek ini berisi notebook Python untuk mengunduh dataset churn dari Kaggle, memuat file CSV, dan menampilkan informasi dasar menggunakan `pandas`.
+Proyek ini berisi analisis eksplorasi data (EDA) untuk dataset `Churn_Modelling.csv` dari Kaggle. Notebook melakukan:
+- unduhan dataset Kaggle
+- pembacaan file CSV dengan `pandas`
+- pemeriksaan kualitas data
+- statistik deskriptif
+- visualisasi univariat fitur numerik dan kategorikal
 
-## File Projek
-- `cek data.ipynb` - Notebook utama yang mengunduh data dari dataset Kaggle `shrutimechlearn/churn-modelling`, lalu membaca dan menampilkan ringkasan `Churn_Modelling.csv`.
-- `README.md` - Dokumentasi proyek ini.
+## File Proyek
+- `cek data.ipynb` - Notebook awal yang mengunduh dataset dan menampilkan ringkasan dasar.
+- `EDA.ipynb` - Notebook EDA utama yang sudah diperbarui dengan pemeriksaan struktur, kualitas data, statistik deskriptif, dan visualisasi distribusi.
+- `README.md` - Dokumentasi dan ringkasan pekerjaan.
+
+## Ringkasan Pekerjaan yang Dilakukan
+1. Unduh dataset `shrutimechlearn/churn-modelling` dari Kaggle menggunakan `kagglehub`.
+2. Baca file `Churn_Modelling.csv` ke dalam DataFrame `df` menggunakan `pandas`.
+3. Tampilkan informasi dasar dataset dengan `df.info()` dan `df.head()`.
+4. Buat kelas bantu untuk:
+   - `DatasetDescription`: menampilkan ukuran dataset, nama kolom, dan preview data.
+   - `DataQualityCheck`: memeriksa missing values, duplikat, dan tipe data.
+   - `DescriptiveStatistics`: menghitung ringkasan statistik dan skewness kolom numerik.
+   - `UnivariateAnalysis`: membuat histogram, boxplot, dan countplot untuk setiap fitur.
+5. Jalankan semua pemeriksaan di atas untuk mendapatkan pemahaman awal tentang isi dataset.
+
+## Timeline Perubahan
+- **31 Mei 2026**: buat `cek data.ipynb` untuk mengunduh dataset `shrutimechlearn/churn-modelling` dan memuat file `Churn_Modelling.csv` menggunakan `pandas`.
+- **1 Juni 2026**: tambahkan `EDA.ipynb` sebagai notebook EDA baru dengan pemeriksaan struktur data, preview, dan visualisasi awal.
+- **1 Juni 2026**: tambahkan kelas terstruktur:
+  - `DatasetDescription` untuk ukuran dataset, nama kolom, dan preview data.
+  - `DataQualityCheck` untuk cek missing values, duplicate, dan tipe data.
+  - `DescriptiveStatistics` untuk ringkasan statistik dan skewness kolom numerik.
+  - `UnivariateAnalysis` untuk histogram, boxplot, dan countplot setiap fitur.
+- **1 Juni 2026**: perbarui `README.md` dengan ringkasan pekerjaan, instruksi menjalankan, dan timeline tanggal spesifik.
+
+## Struktur Kode dalam `EDA.ipynb`
+- `kagglehub.dataset_download` untuk mengunduh file dataset.
+- `pandas.read_csv` untuk memuat CSV.
+- `df.info()` dan `df.head()` untuk melihat struktur dan contoh data.
+- `DatasetDescription` untuk ringkasan awal dataset.
+- `DataQualityCheck` untuk memverifikasi missing values, duplikat, dan tipe kolom.
+- `DescriptiveStatistics` untuk ringkasan statistik numerik dan skewness.
+- `UnivariateAnalysis` untuk plot distribusi dan identifikasi outlier.
 
 ## Cara Menjalankan
-1. Pastikan Python sudah terpasang di komputer.
+1. Pastikan Python terpasang.
 2. Install library yang diperlukan:
-   - `pip install kagglehub pandas numpy`
-3. Buka `cek data.ipynb` di Jupyter Notebook / Jupyter Lab / VS Code.
+   - `pip install kagglehub pandas numpy matplotlib seaborn scikit-learn`
+3. Buka `EDA.ipynb` atau `cek data.ipynb` di Jupyter Notebook / Jupyter Lab / VS Code.
 4. Jalankan sel kode secara berurutan.
 
 ## Library yang Dibutuhkan
 - `kagglehub`
 - `pandas`
 - `numpy`
+- `matplotlib`
+- `seaborn`
+- `scikit-learn`
 
 ## Catatan
-- Notebook ini menggunakan `kagglehub.dataset_download` untuk mengunduh dataset dari Kaggle.
-- Pastikan Anda memiliki akses atau kredensial Kaggle yang valid jika diperlukan oleh `kagglehub`.
-
-## Tujuan
-Notebook ini digunakan untuk:
-- Mengunduh dataset churn dari Kaggle
-- Memuat data ke dalam `pandas.DataFrame`
-- Menampilkan informasi struktur dataset menggunakan `df.info()`
+- `EDA.ipynb` sudah berisi pemeriksaan data lebih lengkap daripada notebook awal.
+- Gunakan `EDA.ipynb` bila ingin memahami dataset secara menyeluruh sebelum preprocessing atau pemodelan.
