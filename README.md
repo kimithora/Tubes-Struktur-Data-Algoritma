@@ -25,14 +25,16 @@ Proyek ini berisi analisis eksplorasi data (EDA) untuk dataset `Churn_Modelling.
 5. Jalankan semua pemeriksaan di atas untuk mendapatkan pemahaman awal tentang isi dataset.
 
 ## Timeline Perubahan
-- **31 Mei 2026**: buat `cek data.ipynb` untuk mengunduh dataset `shrutimechlearn/churn-modelling` dan memuat file `Churn_Modelling.csv` menggunakan `pandas`.
-- **1 Juni 2026**: tambahkan `EDA.ipynb` sebagai notebook EDA baru dengan pemeriksaan struktur data, preview, dan visualisasi awal.
+- **20 Mei 2026**: buat `cek data.ipynb` untuk mengunduh dataset `shrutimechlearn/churn-modelling` dan memuat file `Churn_Modelling.csv` menggunakan `pandas`.
+- **28 Juni 2026**: tambahkan `EDA.ipynb` sebagai notebook EDA baru dengan pemeriksaan struktur data, preview, dan visualisasi awal.
 - **1 Juni 2026**: tambahkan kelas terstruktur:
   - `DatasetDescription` untuk ukuran dataset, nama kolom, dan preview data.
   - `DataQualityCheck` untuk cek missing values, duplicate, dan tipe data.
   - `DescriptiveStatistics` untuk ringkasan statistik dan skewness kolom numerik.
   - `UnivariateAnalysis` untuk histogram, boxplot, dan countplot setiap fitur.
 - **1 Juni 2026**: perbarui `README.md` dengan ringkasan pekerjaan, instruksi menjalankan, dan timeline tanggal spesifik.
+- **1 Juni 2026**: hapus analisis univariat dari `EDA.ipynb`. 
+
 
 ## Struktur Kode dalam `EDA.ipynb`
 - `kagglehub.dataset_download` untuk mengunduh file dataset.
