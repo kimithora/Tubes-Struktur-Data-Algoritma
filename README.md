@@ -63,3 +63,19 @@ Proyek ini berisi analisis eksplorasi data (EDA) untuk dataset `Churn_Modelling.
 ## Catatan
 - `EDA.ipynb` sudah berisi pemeriksaan data lebih lengkap daripada notebook awal.
 - Gunakan `EDA.ipynb` bila ingin memahami dataset secara menyeluruh sebelum preprocessing atau pemodelan.
+
+## Sruktur Laporan khusus Algoritma Logika
+- BAB 1 Pendahuluan:
+   - 1.1 Latar Belakang (Pentingnya Retensi Pelanggan, Customer Churn Sebagai Permasalahan Data Mining, Pemanfaatan Machine Learning, Keterbatasan Metode Konvensional, Alasan Memilih LightGBM, Pentingnya Feature Engineering, )
+   - 1.2 Rumusan Masalah
+   - 1.3 Tujuan Penelitian/Masalah
+
+- BAB 2 Isi:
+   - 2.1 Pengambilan Data
+   - 2.2 Pengumpulan Data
+   - 2.3 Visualisasi Data
+   - 2.4 Analisis
+   - 2.5 Insight
+
+- BAB 3 Penutup:
+   - 3.1 Kesimpulan 
