@@ -67,8 +67,17 @@ Proyek ini berisi analisis eksplorasi data (EDA) untuk dataset `Churn_Modelling.
 ## Sruktur Laporan khusus Algoritma Logika
 - BAB 1 Pendahuluan:
    - 1.1 Latar Belakang (Pentingnya Retensi Pelanggan, Customer Churn Sebagai Permasalahan Data Mining, Pemanfaatan Machine Learning, Keterbatasan Metode Konvensional, Alasan Memilih LightGBM, Pentingnya Feature Engineering, )
-   - 1.2 Rumusan Masalah
-   - 1.3 Tujuan Penelitian/Masalah
+   - 1.2 Rumusan Masalah:
+      - Bagaimana karakteristik customer churn berdasarkan wilayah geografis nasabah?
+      - Bagaimana performa algoritma LightGBM dalam memprediksi customer churn pada dataset nasabah bank?
+      - Seberapa baik model LightGBM dalam mengklasifikasikan nasabah yang berpotensi churn - berdasarkan metrik evaluasi seperti Accuracy, Precision, Recall, F1-Score, dan ROC-AUC?
+      - Variabel manakah yang memiliki kontribusi terbesar terhadap hasil prediksi churn berdasarkan analisis feature importance pada LightGBM?
+   - 1.3 Tujuan Penelitian/Masalah:
+      - Menganalisis karakteristik nasabah yang melakukan churn dan yang tetap menggunakan layanan bank.
+      - Mengidentifikasi faktor-faktor yang memengaruhi customer churn.
+      - Membangun model prediksi customer churn menggunakan algoritma LightGBM.
+      - Mengevaluasi kinerja model LightGBM menggunakan berbagai metrik evaluasi klasifikasi.
+      - Menentukan fitur-fitur yang paling berpengaruh terhadap customer churn berdasarkan feature importance.
 
 - BAB 2 Isi:
    - 2.1 Pengambilan Data
