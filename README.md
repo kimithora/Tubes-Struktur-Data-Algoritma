@@ -55,6 +55,72 @@ Proyek ini berisi analisis eksplorasi data (EDA) untuk dataset `Churn_Modelling.
 3. Buka `EDA.ipynb` atau `cek data.ipynb` di Jupyter Notebook / Jupyter Lab / VS Code.
 4. Jalankan sel kode secara berurutan.
 
+## Pembaruan `trialerror.ipynb`
+`trialerror.ipynb` adalah notebook percobaan regresi logistik yang melakukan:
+
+- Muat dataset `Churn_Modelling.csv` ke DataFrame `df`.
+- Periksa struktur data, tipe kolom, dan missing values.
+- Visualisasikan distribusi target churn `Exited` untuk memperlihatkan ketidakseimbangan kelas.
+- Hapus kolom id yang tidak relevan: `RowNumber`, `CustomerId`, `Surname`.
+- Transformasi fitur kategorikal `Geography` dan `Gender` menjadi variabel dummy dengan `pd.get_dummies(..., drop_first=True)`.
+- Ubah nilai boolean ke integer bila ada kolom bertipe boolean.
+- Pisahkan fitur `X` dan target `y`.
+- Bagi data menjadi set pelatihan dan pengujian dengan perbandingan 80/20 serta stratifikasi target untuk menjaga proporsi churn.
+- Standarisasi fitur numerik menggunakan `StandardScaler` agar regresi logistik dapat dilatih secara stabil.
+- Visualisasikan fungsi sigmoid dan hubungan antara skor linear (`z`) dan probabilitas output.
+- Latih model `LogisticRegression` pada data terstandarisasi.
+- Prediksi probabilitas churn `y_prob` dan kelas target `y_pred`.
+- Evaluasi model menggunakan metrik: accuracy, precision, recall, F1-score, ROC AUC.
+- Tampilkan confusion matrix, classification report, dan precision-recall curve.
+- Analisis koefisien model dan odds ratio untuk menjelaskan pengaruh fitur terhadap churn.
+
+### Hasil Utama dari `trialerror.ipynb`
+- Accuracy: `0.808`
+- Precision: `0.5891`
+- Recall: `0.1867`
+- F1 Score: `0.2836`
+- ROC AUC: `0.7748`
+
+Confusion matrix pada data uji:
+- True Negative (benar tidak churn): `1540`
+- False Positive (diprediksi churn padahal tidak): `53`
+- False Negative (diprediksi tidak churn padahal churn): `331`
+- True Positive (benar churn): `76`
+
+Dari classification report:
+- Kelas 0 (tidak churn): precision 0.82, recall 0.97, F1-score 0.89.
+- Kelas 1 (churn): precision 0.59, recall 0.19, F1-score 0.28.
+
+### Interpretasi Hasil
+- Akurasi model terlihat baik, tetapi sebagian besar prediksi benar karena kelas dominan adalah pelanggan tidak churn. Hal ini menunjukkan adanya ketidakseimbangan kelas yang memengaruhi metrik akurasi.
+- Recall churn sangat rendah (`0.1867`), artinya model hanya mendeteksi sekitar 19% pelanggan yang sebenarnya churn. Dalam konteks churn prediction, recall rendah menjadi kelemahan penting karena banyak pelanggan churn terlewat.
+- Precision churn moderat (`0.5891`), yang berarti sekitar 59% prediksi churn benar. Model cukup konservatif dalam memprediksi churn.
+- ROC AUC `0.7748` menunjukkan model masih lebih baik daripada tebakan acak untuk memisahkan kelas churn dan non-churn, tetapi belum cukup kuat untuk penggunaan produksi tanpa peningkatan.
+- Precision-recall curve membantu menilai trade-off antara deteksi churn dan tingkat kesalahan prediksi churn.
+
+### Interpretasi Fitur
+- Fitur dengan koefisien positif paling besar menunjukkan peningkatan probabilitas churn:
+  - `Age`
+  - `Geography_Germany`
+  - `Balance`
+  - `EstimatedSalary`
+  - `Geography_Spain`
+- Fitur dengan koefisien negatif menunjukkan kontribusi terhadap penurunan peluang churn:
+  - `IsActiveMember`
+  - `Gender_Male`
+  - `CreditScore`
+  - `NumOfProducts`
+  - `HasCrCard`
+  - `Tenure`
+
+- `Age` memiliki odds ratio tertinggi (`2.09`), yang menunjukkan bahwa peningkatan pada variabel usia berhubungan dengan peningkatan odds churn dalam model ini.
+- `IsActiveMember` memiliki odds ratio terendah (`0.597`), yang menandakan bahwa nasabah yang aktif cenderung lebih kecil kemungkinan churn.
+
+### Kesimpulan Tambahan
+- `trialerror.ipynb` menyajikan eksperimen awal regresi logistik untuk prediksi churn.
+- Model saat ini cocok untuk mempelajari hubungan fitur dan perilaku churn, tetapi perlu perbaikan untuk mendeteksi churn dengan lebih baik.
+- Rekomendasi perbaikan: tangani ketidakseimbangan kelas (misalnya oversampling/undersampling), pertimbangkan algoritma non-linear seperti LightGBM, dan optimalkan threshold klasifikasi untuk meningkatkan recall churn.
+
 ## Library yang Dibutuhkan
 - `kagglehub`
 - `pandas`
