@@ -29,16 +29,14 @@ Proyek ini berisi analisis eksplorasi data (EDA) untuk dataset `Churn_Modelling.
 
 ## Timeline Perubahan
 - **20 Mei 2026**: buat `cek data.ipynb` untuk mengunduh dataset `shrutimechlearn/churn-modelling` dan memuat file `Churn_Modelling.csv` menggunakan `pandas`.
-- **28 Juni 2026**: tambahkan `EDA.ipynb` sebagai notebook EDA baru dengan pemeriksaan struktur data, preview, dan visualisasi awal.
-- **1 Juni 2026**: tambahkan kelas terstruktur:
-  - `DatasetDescription` untuk ukuran dataset, nama kolom, dan preview data.
-  - `DataQualityCheck` untuk cek missing values, duplicate, dan tipe data.
-  - `DescriptiveStatistics` untuk ringkasan statistik dan skewness kolom numerik.
-  - `UnivariateAnalysis` untuk histogram, boxplot, dan countplot setiap fitur.
-- **1 Juni 2026**: perbarui `README.md` dengan ringkasan pekerjaan, instruksi menjalankan, dan timeline tanggal spesifik.
-- **1 Juni 2026**: hapus analisis univariat dari `EDA.ipynb`. 
-
-
+- **Awal Juni 2026**: tambahkan kelas terstruktur pada `EDA.ipynb` untuk memperjelas langkah EDA dan pemeriksaan kualitas data.
+- **Awal Juni 2026**: beri penjelasan markdown tambahan pada beberapa sel di notebook agar alur analisis lebih mudah dipahami.
+- **Pertengahan Juni 2026**: hapus analisis univariat dari `EDA.ipynb` untuk memisahkan fokus EDA dan model.
+- **Pertengahan Juni 2026**: tambahkan catatan laporan di `README.md` agar mendukung dokumentasi tugas.
+- **18 Juni 2026**: tambahkan rumusan masalah pada markdown `EDA.ipynb` untuk memperjelas tujuan analisis.
+- **19 Juni 2026**: pisahkan file notebook untuk struktur data dan algoritma, sehingga konten EDA dan model menjadi lebih terorganisir.
+- **19 Juni 2026**: tambahkan `trialerror.ipynb` untuk uji coba model regresi logistik dan analisis performa awal.
+- **19 Juni 2026**: perbarui `README.md` dengan detail pembaruan terbaru, termasuk ringkasan `trialerror.ipynb`.
 ## Struktur Kode dalam `EDA.ipynb`
 - `kagglehub.dataset_download` untuk mengunduh file dataset.
 - `pandas.read_csv` untuk memuat CSV.
