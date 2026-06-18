@@ -68,7 +68,7 @@ Proyek ini berisi analisis eksplorasi data (EDA) untuk dataset `Churn_Modelling.
 - Visualisasikan fungsi sigmoid dan hubungan antara skor linear (`z`) dan probabilitas output.
 - Latih model `LogisticRegression` pada data terstandarisasi.
 - Prediksi probabilitas churn `y_prob` dan kelas target `y_pred`.
-- Evaluasi model menggunakan metrik: accuracy, precision, recall, F1-score, ROC AUC.
+- Evaluasi model menggunakan metrik: accuracy, precision, recall, F1-score.
 - Tampilkan confusion matrix, classification report, dan precision-recall curve.
 - Analisis koefisien model dan odds ratio untuk menjelaskan pengaruh fitur terhadap churn.
 
@@ -77,7 +77,6 @@ Proyek ini berisi analisis eksplorasi data (EDA) untuk dataset `Churn_Modelling.
 - Precision: `0.5891`
 - Recall: `0.1867`
 - F1 Score: `0.2836`
-- ROC AUC: `0.7748`
 
 Confusion matrix pada data uji:
 - True Negative (benar tidak churn): `1540`
