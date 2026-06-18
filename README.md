@@ -1,5 +1,8 @@
 # Tubes STD & Algo
 
+# EKSPLORASI DATA DAN PEMODELAN LIGHTGBM UNTUK ANALISIS SERTA PREDIKSI CUSTOMER CHURN PADA DATA NASABAH PERBANKAN 
+# EDA dan Analisis dengan LightGBM (Light Gradient Boosting Machine)
+
 ## Deskripsi
 Proyek ini berisi analisis eksplorasi data (EDA) untuk dataset `Churn_Modelling.csv` dari Kaggle. Notebook melakukan:
 - unduhan dataset Kaggle
