@@ -1,7 +1,7 @@
 # Tubes STD & Algo
 
-# EKSPLORASI DATA DAN PEMODELAN LIGHTGBM UNTUK ANALISIS SERTA PREDIKSI CUSTOMER CHURN PADA DATA NASABAH PERBANKAN 
-# EDA dan Analisis dengan LightGBM (Light Gradient Boosting Machine)
+# EKSPLORASI DATA DAN PEMODELAN Regresi Logistik UNTUK ANALISIS SERTA PREDIKSI CUSTOMER CHURN PADA DATA NASABAH PERBANKAN 
+# EDA dan Analisis dengan Regresi Logistik (Light Gradient Boosting Machine)
 
 ## Deskripsi
 Proyek ini berisi analisis eksplorasi data (EDA) untuk dataset `Churn_Modelling.csv` dari Kaggle. Notebook melakukan:
@@ -37,6 +37,7 @@ Proyek ini berisi analisis eksplorasi data (EDA) untuk dataset `Churn_Modelling.
 - **19 Juni 2026**: pisahkan file notebook untuk struktur data dan algoritma, sehingga konten EDA dan model menjadi lebih terorganisir.
 - **19 Juni 2026**: tambahkan `trialerror.ipynb` untuk uji coba model regresi logistik dan analisis performa awal.
 - **19 Juni 2026**: perbarui `README.md` dengan detail pembaruan terbaru, termasuk ringkasan `trialerror.ipynb`.
+
 ## Struktur Kode dalam `EDA.ipynb`
 - `kagglehub.dataset_download` untuk mengunduh file dataset.
 - `pandas.read_csv` untuk memuat CSV.
@@ -117,7 +118,7 @@ Dari classification report:
 ### Kesimpulan Tambahan
 - `trialerror.ipynb` menyajikan eksperimen awal regresi logistik untuk prediksi churn.
 - Model saat ini cocok untuk mempelajari hubungan fitur dan perilaku churn, tetapi perlu perbaikan untuk mendeteksi churn dengan lebih baik.
-- Rekomendasi perbaikan: tangani ketidakseimbangan kelas (misalnya oversampling/undersampling), pertimbangkan algoritma non-linear seperti LightGBM, dan optimalkan threshold klasifikasi untuk meningkatkan recall churn.
+- Rekomendasi perbaikan: tangani ketidakseimbangan kelas (misalnya oversampling/undersampling), pertimbangkan algoritma non-linear seperti Regresi Logistik, dan optimalkan threshold klasifikasi untuk meningkatkan recall churn.
 
 ## Library yang Dibutuhkan
 - `kagglehub`
@@ -133,17 +134,17 @@ Dari classification report:
 
 ## Sruktur Laporan khusus Algoritma Logika
 - BAB 1 Pendahuluan:
-   - 1.1 Latar Belakang (Pentingnya Retensi Pelanggan, Customer Churn Sebagai Permasalahan Data Mining, Pemanfaatan Machine Learning, Keterbatasan Metode Konvensional, Alasan Memilih LightGBM, Pentingnya Feature Engineering, )
+   - 1.1 Latar Belakang (Pentingnya Retensi Pelanggan, Customer Churn Sebagai Permasalahan Data Mining, Pemanfaatan Machine Learning, Keterbatasan Metode Konvensional, Alasan Memilih Regresi Logistik, Pentingnya Feature Engineering, )
    - 1.2 Rumusan Masalah:
       - Bagaimana karakteristik customer churn berdasarkan wilayah geografis nasabah?
-      - Bagaimana performa algoritma LightGBM dalam memprediksi customer churn pada dataset nasabah bank?
-      - Seberapa baik model LightGBM dalam mengklasifikasikan nasabah yang berpotensi churn - berdasarkan metrik evaluasi seperti Accuracy, Precision, Recall, F1-Score, dan ROC-AUC?
-      - Variabel manakah yang memiliki kontribusi terbesar terhadap hasil prediksi churn berdasarkan analisis feature importance pada LightGBM?
+      - Bagaimana performa algoritma Regresi Logistik dalam memprediksi customer churn pada dataset nasabah bank?
+      - Seberapa baik model Regresi Logistik dalam mengklasifikasikan nasabah yang berpotensi churn - berdasarkan metrik evaluasi seperti Accuracy, Precision, Recall, F1-Score, dan ROC-AUC?
+      - Variabel manakah yang memiliki kontribusi terbesar terhadap hasil prediksi churn berdasarkan analisis feature importance pada Regresi Logistik?
    - 1.3 Tujuan Penelitian/Masalah:
       - Menganalisis karakteristik nasabah yang melakukan churn dan yang tetap menggunakan layanan bank.
       - Mengidentifikasi faktor-faktor yang memengaruhi customer churn.
-      - Membangun model prediksi customer churn menggunakan algoritma LightGBM.
-      - Mengevaluasi kinerja model LightGBM menggunakan berbagai metrik evaluasi klasifikasi.
+      - Membangun model prediksi customer churn menggunakan algoritma Regresi Logistik.
+      - Mengevaluasi kinerja model Regresi Logistik menggunakan berbagai metrik evaluasi klasifikasi.
       - Menentukan fitur-fitur yang paling berpengaruh terhadap customer churn berdasarkan feature importance.
 
 - BAB 2 Isi:
