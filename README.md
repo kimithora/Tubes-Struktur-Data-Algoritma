@@ -42,7 +42,8 @@ File-file utama dalam projek:
 ## Catatan
 - `README.md` ini hanya berisi panduan penggunaan dan struktur umum.
 - Jangan menghapus `Churn_Modelling.csv` atau notebook jika Anda ingin melanjutkan eksperimen.
-- `PROJECT_OVERVIEW.md` berisi petunjuk tambahan dan penjelasan file tanpa detail hasil analisis.
+- `PROJECT_OVERVIEW.md` berisi petunjuk tambahan, penjelasan file, dan ringkasan hasil analisis.
+- Karena berupa Markdown, `PROJECT_OVERVIEW.md` dapat ditampilkan langsung di GitHub bersama `README.md`.
 
 ## Tips
 - Gunakan `Ctrl+Shift+P` lalu pilih `Python: Select Interpreter` untuk memastikan environment `.venv` aktif.
